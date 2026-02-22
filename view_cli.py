@@ -124,8 +124,9 @@ class ViewCLI:
     def list_tasks(self):
         all_tasks = self.todolist.get_all_tasks()
 
-        for task in all_tasks:
-            print(task)
+        for t in all_tasks:
+
+            print(f'{t.id:4} - {t.text} {"(done)" if t.done else ""}')
 
 
 if __name__ == "__main__":
